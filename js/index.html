@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript</h1>
+
+<p id="test" class="modificar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, labore?</p>
+
+<p id="demo" class="modificar">Lorem, ipsum dolor.</p>
+
+<script>
+    document.write("<h1>Lo que yo quiera</h1>");
+</script>
+
+<script>
+let text = "Esto va para el párrafo demo";
+let element = document.getElementById("demo");
+let htmlInterno = document.getElementById("demo").innerHTML;
+document.getElementById("demo").innerHTML = text;
+document.getElementById("demo").style.color = "red"; 
+let elementos = document.getElementsByClassName("modificar");
+</script>
+
+</body>
+</html>

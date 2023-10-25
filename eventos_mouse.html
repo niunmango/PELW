@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Mouse</title>
+    <script type="text/javascript">
+        function alert1(texto) {
+            i++;
+            salida.value += i + " " + texto + "\n";
+        }
+    </script>
+    <style>
+        button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 800;
+            background-color: #00897B;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #E0E0E0;
+        }
+
+        button:active {
+            background-color: #D3D3D3;
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var i = 0;
+    </script>
+    <p><button onclick="alert1('onclick')">onclick</button></p>
+    <p><button ondblclick="alert1('ondblclick')">ondblclick</button></p>
+    <p><button onmouseover="alert1('onmouseover')" onmouseup="alert1('onmouseup')" onmouseout="alert1('onmouseout')"
+            onmousedown="alert1('onmousedown')" onmousemove="alert1('onmousemove')">onmouse... (RESTO)</button></p>
+    <p> <textarea name="salida" id="salida" cols="20" rows="25"></textarea></p>
+</body>
+
+</html>

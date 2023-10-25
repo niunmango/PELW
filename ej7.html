@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario</title>
+    <style>
+      /* Estilo para el div verde */
+      .green-box {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+        display: none; /* Inicialmente oculto */
+      }
+    </style>
+    <script>
+      // Función para evaluar el texto y mostrar el cuadro verde
+      function evaluarTexto() {
+        // Obtener el valor del campo de texto
+        var texto = document.getElementById('campo-texto').value.toLowerCase();
+
+        // Lista de palabras aceptadas
+        var palabrasAceptadas = ['y', 'yes', 'si', 'ok', 'oui', 'ja', 'sim', 'sí'];
+
+        // Verificar si el texto ingresado está en la lista de palabras aceptadas
+        if (palabrasAceptadas.includes(texto)) {
+          // Mostrar el cuadro verde
+          document.getElementById('green-box').style.display = 'block';
+        } else {
+          // Ocultar el cuadro verde (si estaba visible)
+          document.getElementById('green-box').style.display = 'none';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <label for="campo-texto">Ingrese un texto de hasta tres letras:</label>
+    <input type="text" id="campo-texto" maxlength="3" onblur="evaluarTexto()" />
+    <div id="green-box" class="green-box"></div>
+  </body>
+</html>

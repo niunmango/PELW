@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos form</title>
+    <script type="text/javascript">
+        function alert1(texto) {
+            i++;
+            salida.value += i + " " + texto + "\n";
+        }
+    </script>
+    <style>
+        section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+        .button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 800;
+            background-color: #00897B;
+            color: white;
+        }
+
+        .button:hover {
+            background-color: #E0E0E0;
+        }
+
+        .button:active {
+            background-color: #D3D3D3;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var i = 0;
+    </script>
+    <section>
+        <form action="" onsubmit="alert('onsubmit')" onreset="alert1('onreset')">
+            <p>Input text</p>
+            <p><input type="text" onblur="alert1('onblur')" onchange="alert1('onchange')" onfocus="alert1('onfocus')"
+                    onselect="alert1('onselect')"></p>
+            <p><input type="submit" class="button" value="Enviar"></p>
+            <p><input type="reset" class="button" value="Limpiar"></p>
+        </form>
+    </section>
+
+    <p> <textarea name="salida" id="salida" cols="20" rows="22"></textarea></p>
+</body>
+
+</html>
