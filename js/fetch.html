@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo fetch()</title>
+</head>
+
+<body>
+    <h1>Ejemplo fetch()</h1>
+    <div id="posts"></div>
+
+    <script>
+        async function obtenerDatos() {
+            let postsDiv = document.getElementById('posts');
+            try {
+                const datos = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json();
+                datos.forEach(post => {
+                    postsDiv.innerHTML += `<p>Título: ${post.title}</p><p>Contenido: ${post.body}</p>`;
+                });
+            } catch (error) {
+                postsDiv.innerHTML += `<p>Se produjo un error al obtener los datos: ${error}</p>`;
+            } finally {
+                console.log('La solicitud a la API ha finalizado');
+            }
+        }
+
+        obtenerDatos();
+    </script>
+</body>
+
+</html>

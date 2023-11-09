@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Mouse</title>
     <script type="text/javascript">
-        function alert1(texto) {
+        function mostrar_textarea(texto) {
             i++;
             salida.value += i + " " + texto + "\n";
         }
@@ -42,10 +42,10 @@
     <script>
         var i = 0;
     </script>
-    <p><button onclick="alert1('onclick')">onclick</button></p>
-    <p><button ondblclick="alert1('ondblclick')">ondblclick</button></p>
-    <p><button onmouseover="alert1('onmouseover')" onmouseup="alert1('onmouseup')" onmouseout="alert1('onmouseout')"
-            onmousedown="alert1('onmousedown')" onmousemove="alert1('onmousemove')">onmouse... (RESTO)</button></p>
+    <p><button onclick="mostrar_textarea('onclick')">onclick</button></p>
+    <p><button ondblclick="mostrar_textarea('ondblclick')">ondblclick</button></p>
+    <p><button onmouseover="mostrar_textarea('onmouseover')" onmouseup="mostrar_textarea('onmouseup')" onmouseout="mostrar_textarea('onmouseout')"
+            onmousedown="mostrar_textarea('onmousedown')" onmousemove="mostrar_textarea('onmousemove')">onmouse... (RESTO)</button></p>
     <p> <textarea name="salida" id="salida" cols="20" rows="25"></textarea></p>
 </body>
 

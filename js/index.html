@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h1>JavaScript</h1>
+    <h1>JavaScript</h1>
 
-<p id="test" class="modificar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, labore?</p>
+    <p id="test" class="modificar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, labore?</p>
 
-<p id="demo" class="modificar">Lorem, ipsum dolor.</p>
+    <p id="demo" class="modificar">Lorem, ipsum dolor.</p>
 
+    <script>
+        document.write("<h1>Lo que yo quiera</h1>");
+    </script>
+
+    <script>
+        let text = "Esto va para el párrafo demo";
+        let element = document.getElementById("demo");
+        let htmlInterno = document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo").style.color = "red";
+        let elementos = document.getElementsByClassName("modificar");
+    </script>
+    <hr>
+    <div>
+        <script>
+            let variable1 = "Hola como esta";
+            document.write(variable1.length); //en pantalla vemos HOLA!
+        </script>
+    </div>
+    <hr>
+    <div>
+        <script>
+            let cadena = "Hola!";
+            document.write(cadena.toUpperCase()); //en pantalla vemos HOLA!
+        </script>
+    </div>
+    <hr>
 <script>
-    document.write("<h1>Lo que yo quiera</h1>");
+    //acceso a base de datos
+    let titulo = "Titulo del artículo";
+    let contenido = "lorem ipsum pepepepepe epepepep";
+    document.write("<article>");
+    document.write("<h1>" + titulo.toUpperCase() + "</h1>");
+    document.write("<p>" + contenido + "</p>");
+    document.write("</article>");
 </script>
 
-<script>
-let text = "Esto va para el párrafo demo";
-let element = document.getElementById("demo");
-let htmlInterno = document.getElementById("demo").innerHTML;
-document.getElementById("demo").innerHTML = text;
-document.getElementById("demo").style.color = "red"; 
-let elementos = document.getElementsByClassName("modificar");
-</script>
 
-<script>
-    let str="Hola!";
-    document.write(str.toUpperCase()); //en pantalla vemos HOLA!
-</script>
-
-<script>
-    window.resizeTo(200,200); //no suele funcionar
-    window.moveTo(400,600); //no suele funcionar
-</script>
-<button onclick="window.close()">Cerrar</button>
-<button onclick="window.open('http://google.com')">Popup</button>
-
+    <hr>
+    <div>
+        <script>
+            window.resizeTo(200, 200); //no suele funcionar
+            window.moveTo(400, 600); //no suele funcionar
+        </script>
+        <button onclick="window.close()">Cerrar</button>
+        <button onclick="window.open('http://google.com')">Popup</button>
+    </div>
 </body>
+
 </html>

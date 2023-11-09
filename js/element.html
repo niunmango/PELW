@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de suma</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    // Función para realizar la suma
+    function suma() {
+      // Obtenemos los valores de los campos de texto
+      var numero1 = document.getElementById("numero1").value;
+      var numero2 = document.getElementById("numero2").value;
+
+      // Realizamos la suma
+      var suma = parseInt(numero1) + parseInt(numero2);
+
+      // Mostramos el resultado
+      document.getElementById("resultado").innerHTML = suma;
+    }
+    
+  </script>
+
+  <form>
+    <p><label for="numero1">Número 1:</label>
+    <input type="number" id="numero1">
+</p>
+<p>
+    <label for="numero2">Número 2:</label>
+    <input type="number" id="numero2">
+</p>
+    <input type="button" id="boton" value="Sumar" onclick="suma()">
+    <div id="resultado"></div>
+  </form>
+</body>
+</html>
