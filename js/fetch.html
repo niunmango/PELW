@@ -9,6 +9,7 @@
 
 <body>
     <h1>Ejemplo fetch()</h1>
+    <p id="demo"></p>
     <div id="posts"></div>
 
     <script>
@@ -27,7 +28,16 @@
         }
 
         obtenerDatos();
+        
+            localStorage.setItem("nombre1","Juan Perez");
+            localStorage.setItem("score1","100");
+            
+            document.getElementById("demo").innerHTML = localStorage.getItem("nombre");  
+    
+
     </script>
+
+
 </body>
 
 </html>
